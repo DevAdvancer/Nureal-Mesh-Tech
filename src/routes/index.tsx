@@ -14,14 +14,14 @@ export const Route = createFileRoute("/")({
       { property: "og:title", content: "Neural Mesh Tech — Software that ships." },
       { property: "og:description", content: "A small, focused software and IT consulting studio." },
       { property: "og:type", content: "website" },
-      { property: "og:url", content: "https://neuralmesh.tech/" },
-      { property: "og:image", content: "https://neuralmesh.tech/og-image.png" },
+      { property: "og:url", content: "https://neuralmeshs.com/" },
+      { property: "og:image", content: "https://neuralmeshs.com/og-image.png" },
       { name: "twitter:card", content: "summary_large_image" },
       { name: "twitter:title", content: "Neural Mesh Tech — Software that ships." },
       { name: "twitter:description", content: "A small, focused software and IT consulting studio. No buzzwords. No bloat. Just good product." },
-      { name: "twitter:image", content: "https://neuralmesh.tech/og-image.png" },
+      { name: "twitter:image", content: "https://neuralmeshs.com/og-image.png" },
     ],
-    links: [{ rel: "canonical", href: "https://neuralmesh.tech/" }],
+    links: [{ rel: "canonical", href: "https://neuralmeshs.com/" }],
     scripts: [
       {
         type: "application/ld+json",
@@ -30,11 +30,11 @@ export const Route = createFileRoute("/")({
           "@type": "Organization",
           name: "Neural Mesh Tech",
           description: "Software development and IT consulting studio.",
-          url: "https://neuralmesh.tech",
+          url: "https://neuralmeshs.com",
           foundingDate: "2024",
           contactPoint: {
             "@type": "ContactPoint",
-            email: "hello@neuralmesh.tech",
+            email: "hello@neuralmeshs.com",
             contactType: "sales",
           },
         }),
@@ -49,7 +49,7 @@ export const Route = createFileRoute("/")({
               "@type": "ListItem",
               position: 1,
               name: "Home",
-              item: "https://neuralmesh.tech/",
+              item: "https://neuralmeshs.com/",
             },
           ],
         }),
@@ -400,8 +400,8 @@ function Index() {
                 </li>
               ))}
             </ul>
-            <a href="mailto:hello@neuralmesh.tech" className="font-mono text-coral text-[18px] md:text-[22px] break-all hover:underline">
-              hello@neuralmesh.tech
+            <a href="mailto:hello@neuralmeshs.com" className="font-mono text-coral text-[18px] md:text-[22px] break-all hover:underline">
+              hello@neuralmeshs.com
             </a>
           </div>
 
@@ -427,8 +427,8 @@ function Index() {
         <div className="h-px w-full" style={{ background: "rgba(123,47,255,0.55)" }} />
         <div className="max-w-7xl mx-auto px-6 md:px-10 py-16 grid md:grid-cols-2 gap-12">
           <div>
-            <div className="font-display font-extrabold text-violet leading-none" style={{ fontSize: 48 }}>NMT</div>
-            <p className="font-body text-near-white/55 text-[14px] mt-3">Software that ships.</p>
+            <img src="/icondark.png" alt="Neural Mesh Tech Logo" className="h-42 w-auto object-contain" />
+            <p className="font-body text-near-white/55 text-[14px] mt-4">Software that ships.</p>
           </div>
           <div className="grid grid-cols-2 sm:grid-cols-4 gap-6 md:justify-self-end md:text-right">
             {["Services", "Work", "Process", "Contact"].map((l) => (
@@ -436,8 +436,8 @@ function Index() {
             ))}
           </div>
         </div>
-        <div className="border-t border-violet/20 py-6 text-center font-mono text-[11px] uppercase tracking-[0.2em] text-near-white/50">
-          Neural Mesh Tech © 2024 · Built with intent, not a template.
+        <div className="border-t border-violet/20 py-6 px-6 text-center font-mono text-[10px] sm:text-[11px] uppercase tracking-[0.1em] sm:tracking-[0.2em] text-near-white/50 leading-relaxed">
+          Neural Mesh Tech © 2024 <span className="inline-block">· Built with intent, not a template.</span>
         </div>
       </footer>
 
@@ -522,4 +522,3 @@ function ProjectCard({
     </button>
   );
 }
-

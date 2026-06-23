@@ -13,7 +13,7 @@ export const Route = createFileRoute("/work/$slug")({
     const p = loaderData?.project;
     const title = p ? `${p.name} — Neural Mesh Tech case study` : "Case study — Neural Mesh Tech";
     const desc = p?.desc ?? "A Neural Mesh Tech project case study.";
-    const url = p ? `https://neuralmesh.tech/work/${p.slug}` : "https://neuralmesh.tech/work";
+    const url = p ? `https://neuralmeshs.com/work/${p.slug}` : "https://neuralmeshs.com/work";
     return {
       meta: [
         { title },
@@ -22,11 +22,11 @@ export const Route = createFileRoute("/work/$slug")({
         { property: "og:description", content: desc },
         { property: "og:type", content: "article" },
         { property: "og:url", content: url },
-        { property: "og:image", content: "https://neuralmesh.tech/og-image.png" },
+        { property: "og:image", content: "https://neuralmeshs.com/og-image.png" },
         { name: "twitter:card", content: "summary_large_image" },
         { name: "twitter:title", content: title },
         { name: "twitter:description", content: desc },
-        { name: "twitter:image", content: "https://neuralmesh.tech/og-image.png" },
+        { name: "twitter:image", content: "https://neuralmeshs.com/og-image.png" },
       ],
       links: p ? [{ rel: "canonical", href: url }] : [],
       scripts: p
@@ -52,13 +52,13 @@ export const Route = createFileRoute("/work/$slug")({
                     "@type": "ListItem",
                     position: 1,
                     name: "Home",
-                    item: "https://neuralmesh.tech/",
+                    item: "https://neuralmeshs.com/",
                   },
                   {
                     "@type": "ListItem",
                     position: 2,
                     name: "Work",
-                    item: "https://neuralmesh.tech/#work",
+                    item: "https://neuralmeshs.com/#work",
                   },
                   {
                     "@type": "ListItem",

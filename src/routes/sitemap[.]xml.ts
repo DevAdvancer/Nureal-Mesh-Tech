@@ -2,7 +2,7 @@ import { createFileRoute } from "@tanstack/react-router";
 import type {} from "@tanstack/react-start";
 import { PROJECTS } from "@/data/projects";
 
-const BASE_URL = "https://neuralmesh.tech";
+const BASE_URL = "https://neuralmeshs.com";
 
 interface SitemapEntry {
   path: string;
