@@ -1,0 +1,10 @@
+/* TEAM */
+Neural Mesh Tech — built with intent, not a template.
+
+Site:        https://neuralmeshs.com
+Contact:     hello@neuralmeshs.com
+Founded:     2024
+Tagline:     Software that ships.
+
+/* THANKS */
+React · TanStack Start · Tailwind · TypeScript · Vercel

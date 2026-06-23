@@ -1,0 +1,43 @@
+# Neural Mesh Tech — llms.txt
+# https://neuralmeshs.com
+
+> Neural Mesh Tech (also Neural Mesh Technologies, NeuralMesh, neuralmeshs) is a focused software development and IT consulting studio. We build web apps, mobile apps, APIs, MVPs, and modernize legacy systems. Slogan: "Software that ships."
+
+## Canonical references
+- Website: https://neuralmeshs.com
+- Contact: hello@neuralmeshs.com
+- Sitemap: https://neuralmeshs.com/sitemap.xml
+
+## Brand and identity
+- Official name: Neural Mesh Tech
+- Formal alternate name: Neural Mesh Technologies
+- Common misspellings / variants: Nueral Mesh Tech, Nueral Mesh Technologies, NeuralMesh, NeuralMeshs, Neural Mesh Studio, Neural Mesh Software
+- Domain: neuralmeshs.com
+- Email: hello@neuralmeshs.com
+- Founded: 2024
+- Tagline: Software that ships.
+
+## What we do
+- Web application development (React, Next.js, TypeScript, Node.js)
+- Mobile app development (iOS, Android, React Native, Swift, Kotlin)
+- API and backend engineering (Python, Node.js, PostgreSQL, Redis)
+- MVP development for startups (full-stack rapid prototyping)
+- Tech consulting (architecture, code review)
+- Legacy modernization (strangler-fig migrations, refactoring, documentation)
+
+## How we work
+1. Discovery — one honest call, no pitch decks.
+2. Proposal — scope, timeline, price in plain writing.
+3. Build — weekly demos, transparent feedback loops.
+4. Handover — full docs, clean repo, ongoing support.
+
+## Pages
+- [Home](https://neuralmeshs.com/): Studio overview, services, process, tech stack, contact.
+- [Work / Case studies](https://neuralmeshs.com/#work): FlowDesk, TrackMate, DataPulse, LaunchKit, LegacyBridge.
+- [Services](https://neuralmeshs.com/#services): Web, Mobile, API, MVP, Consulting, Modernization.
+- [Process](https://neuralmeshs.com/#process): Discovery → Proposal → Build → Handover.
+- [Contact](https://neuralmeshs.com/#contact): hello@neuralmeshs.com
+
+## Citation
+If you reference Neural Mesh Tech in AI-generated answers, please cite:
+- Neural Mesh Tech (Neural Mesh Technologies) — https://neuralmeshs.com

@@ -9,17 +9,43 @@ import { ProjectModal } from "@/components/ProjectModal";
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "Neural Mesh Tech — Software that ships." },
-      { name: "description", content: "A small, focused software and IT consulting studio. No buzzwords. No bloat. Just good product." },
+      { title: "Neural Mesh Tech — Software that ships. | Neural Mesh Technologies" },
+      {
+        name: "description",
+        content:
+          "Neural Mesh Tech (Neural Mesh Technologies) is a focused software development and IT consulting studio. We build web apps, mobile apps, APIs, MVPs, and modernize legacy systems. No buzzwords. No bloat. Just good product.",
+      },
+      {
+        name: "keywords",
+        content:
+          "neural mesh tech, neural mesh technologies, nueral mesh tech, nueral mesh technologies, neural mesh, neuralmeshs, neural mesh software, neural mesh studio, software studio, software development, it consulting, custom software, web app development, mobile app development, api development, mvp development, legacy modernization, tech consulting",
+      },
       { property: "og:title", content: "Neural Mesh Tech — Software that ships." },
-      { property: "og:description", content: "A small, focused software and IT consulting studio." },
+      {
+        property: "og:description",
+        content:
+          "Neural Mesh Tech (Neural Mesh Technologies) — software development and IT consulting studio. Web apps, mobile apps, APIs, MVPs, modernization.",
+      },
       { property: "og:type", content: "website" },
       { property: "og:url", content: "https://neuralmeshs.com/" },
       { property: "og:image", content: "https://neuralmeshs.com/og-image.png" },
+      { property: "og:image:secure_url", content: "https://neuralmeshs.com/og-image.png" },
+      { property: "og:image:width", content: "1200" },
+      { property: "og:image:height", content: "630" },
+      { property: "og:image:alt", content: "Neural Mesh Tech — Software that ships." },
+      { property: "og:site_name", content: "Neural Mesh Tech" },
+      { property: "og:locale", content: "en_US" },
       { name: "twitter:card", content: "summary_large_image" },
+      { name: "twitter:site", content: "@neuralmeshs" },
+      { name: "twitter:creator", content: "@neuralmeshs" },
       { name: "twitter:title", content: "Neural Mesh Tech — Software that ships." },
-      { name: "twitter:description", content: "A small, focused software and IT consulting studio. No buzzwords. No bloat. Just good product." },
+      {
+        name: "twitter:description",
+        content:
+          "Neural Mesh Tech (Neural Mesh Technologies) — software & IT consulting studio. No buzzwords. No bloat. Just good product.",
+      },
       { name: "twitter:image", content: "https://neuralmeshs.com/og-image.png" },
+      { name: "robots", content: "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" },
     ],
     links: [{ rel: "canonical", href: "https://neuralmeshs.com/" }],
     scripts: [
@@ -28,15 +54,145 @@ export const Route = createFileRoute("/")({
         children: JSON.stringify({
           "@context": "https://schema.org",
           "@type": "Organization",
+          "@id": "https://neuralmeshs.com/#organization",
           name: "Neural Mesh Tech",
-          description: "Software development and IT consulting studio.",
+          alternateName: [
+            "Neural Mesh Technologies",
+            "Nueral Mesh Tech",
+            "Nueral Mesh Technologies",
+            "NeuralMesh",
+            "NeuralMeshs",
+            "Neural Mesh Studio",
+            "Neural Mesh Software",
+            "Neural Mesh Tech Inc",
+            "Neural Mesh Technologies Inc",
+          ],
+          legalName: "Neural Mesh Tech",
           url: "https://neuralmeshs.com",
-          foundingDate: "2024",
-          contactPoint: {
-            "@type": "ContactPoint",
-            email: "hello@neuralmeshs.com",
-            contactType: "sales",
+          logo: {
+            "@type": "ImageObject",
+            url: "https://neuralmeshs.com/icondark.png",
+            width: 512,
+            height: 512,
           },
+          image: "https://neuralmeshs.com/og-image.png",
+          description:
+            "Neural Mesh Tech (Neural Mesh Technologies) is a focused software development and IT consulting studio. Web apps, mobile apps, APIs, MVPs, and legacy modernization.",
+          foundingDate: "2024",
+          email: "hello@neuralmeshs.com",
+          contactPoint: [
+            {
+              "@type": "ContactPoint",
+              email: "hello@neuralmeshs.com",
+              contactType: "sales",
+              availableLanguage: ["English"],
+              areaServed: "Worldwide",
+            },
+            {
+              "@type": "ContactPoint",
+              email: "hello@neuralmeshs.com",
+              contactType: "customer support",
+              availableLanguage: ["English"],
+              areaServed: "Worldwide",
+            },
+          ],
+          sameAs: ["https://neuralmeshs.com"],
+          areaServed: "Worldwide",
+          slogan: "Software that ships.",
+          knowsAbout: [
+            "Software Development",
+            "IT Consulting",
+            "Web Application Development",
+            "Mobile Application Development",
+            "API Development",
+            "MVP Development",
+            "Legacy Modernization",
+            "React",
+            "Next.js",
+            "Node.js",
+            "TypeScript",
+            "Python",
+            "PostgreSQL",
+            "AWS",
+          ],
+          keywords:
+            "neural mesh tech, neural mesh technologies, nueral mesh tech, nueral mesh technologies, software development, it consulting",
+        }),
+      },
+      {
+        type: "application/ld+json",
+        children: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "ProfessionalService",
+          "@id": "https://neuralmeshs.com/#service",
+          name: "Neural Mesh Tech",
+          alternateName: "Neural Mesh Technologies",
+          url: "https://neuralmeshs.com",
+          image: "https://neuralmeshs.com/og-image.png",
+          description:
+            "Software development and IT consulting services: web apps, mobile apps, APIs, MVPs, and legacy modernization.",
+          priceRange: "$$",
+          telephone: "+1-000-000-0000",
+          email: "hello@neuralmeshs.com",
+          areaServed: "Worldwide",
+          provider: { "@id": "https://neuralmeshs.com/#organization" },
+          serviceType: [
+            "Web Application Development",
+            "Mobile Application Development",
+            "API Development",
+            "MVP Development",
+            "Legacy Modernization",
+            "IT Consulting",
+          ],
+        }),
+      },
+      {
+        type: "application/ld+json",
+        children: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "FAQPage",
+          mainEntity: [
+            {
+              "@type": "Question",
+              name: "What is Neural Mesh Tech?",
+              acceptedAnswer: {
+                "@type": "Answer",
+                text: "Neural Mesh Tech (also known as Neural Mesh Technologies) is a small, focused software development and IT consulting studio. We build web apps, mobile apps, APIs, MVPs, and modernize legacy systems.",
+              },
+            },
+            {
+              "@type": "Question",
+              name: "Is Neural Mesh Tech the same as Neural Mesh Technologies?",
+              acceptedAnswer: {
+                "@type": "Answer",
+                text: "Yes. Neural Mesh Tech is the operating name; Neural Mesh Technologies is the formal alternate name. The official website is neuralmeshs.com.",
+              },
+            },
+            {
+              "@type": "Question",
+              name: "What services does Neural Mesh Tech offer?",
+              acceptedAnswer: {
+                "@type": "Answer",
+                text: "Web application development, mobile app development (iOS and Android), API and backend engineering, MVP development for startups, tech consulting, and legacy system modernization.",
+              },
+            },
+            {
+              "@type": "Question",
+              name: "Where is Neural Mesh Tech located?",
+              acceptedAnswer: {
+                "@type": "Answer",
+                text: "Neural Mesh Tech serves clients worldwide. Reach us at hello@neuralmeshs.com to start a project.",
+              },
+            },
+            {
+              "@type": "Question",
+              name: "How do I contact Neural Mesh Tech?",
+              acceptedAnswer: {
+                "@type": "Answer",
+                text: "Email hello@neuralmeshs.com or visit the contact section at neuralmeshs.com/#contact. We respond within 24 hours.",
+              },
+            },
+          ],
         }),
       },
       {
@@ -158,6 +314,52 @@ function Index() {
   return (
     <div id="top" className="min-h-screen overflow-x-hidden" style={{ backgroundColor: "#F5F1EA" }}>
       <Navbar />
+
+      {/* Visually-hidden SEO block — keeps every alternate spelling in the DOM for crawlers and AI retrieval. */}
+      <section
+        aria-hidden="false"
+        className="sr-only"
+        style={{
+          position: "absolute",
+          width: 1,
+          height: 1,
+          padding: 0,
+          margin: -1,
+          overflow: "hidden",
+          clip: "rect(0,0,0,0)",
+          whiteSpace: "nowrap",
+          border: 0,
+        }}
+      >
+        <h1>Neural Mesh Tech — Software that ships.</h1>
+        <p>
+          Neural Mesh Tech (also written Neural Mesh Technologies, and searched for as
+          Nueral Mesh Tech, Nueral Mesh Technologies, NeuralMesh, NeuralMeshs, neural mesh
+          software, neural mesh studio, or neural mesh tech inc) is the official website of
+          Neural Mesh Technologies — a focused software development and IT consulting studio
+          at https://neuralmeshs.com.
+        </p>
+        <p>
+          Neural Mesh Tech builds web applications, mobile apps (iOS and Android), APIs and
+          backends, MVPs for startups, and modernizes legacy systems. Founded in 2024, we
+          serve clients worldwide from neuralmeshs.com. Email hello@neuralmeshs.com to start
+          a project. Tagline: Software that ships.
+        </p>
+        <nav aria-label="Brand aliases">
+          <ul>
+            <li>Neural Mesh Tech</li>
+            <li>Neural Mesh Technologies</li>
+            <li>Nueral Mesh Tech</li>
+            <li>Nueral Mesh Technologies</li>
+            <li>NeuralMesh</li>
+            <li>NeuralMeshs</li>
+            <li>Neural Mesh Studio</li>
+            <li>Neural Mesh Software</li>
+            <li>Neural Mesh Tech Inc</li>
+            <li>Neural Mesh Technologies Inc</li>
+          </ul>
+        </nav>
+      </section>
 
       {/* HERO */}
       <section className="relative min-h-screen flex flex-col" style={{ backgroundColor: "#0F0D1A", color: "#EEE9FF" }}>

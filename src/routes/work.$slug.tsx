@@ -11,22 +11,44 @@ export const Route = createFileRoute("/work/$slug")({
   },
   head: ({ loaderData }) => {
     const p = loaderData?.project;
-    const title = p ? `${p.name} — Neural Mesh Tech case study` : "Case study — Neural Mesh Tech";
-    const desc = p?.desc ?? "A Neural Mesh Tech project case study.";
+    const title = p
+      ? `${p.name} — Neural Mesh Tech case study | Neural Mesh Technologies`
+      : "Case study — Neural Mesh Tech | Neural Mesh Technologies";
+    const desc =
+      p?.desc ?? "A Neural Mesh Tech (Neural Mesh Technologies) project case study.";
     const url = p ? `https://neuralmeshs.com/work/${p.slug}` : "https://neuralmeshs.com/work";
     return {
       meta: [
         { title },
-        { name: "description", content: desc },
+        {
+          name: "description",
+          content: `${desc} By Neural Mesh Tech (Neural Mesh Technologies).`,
+        },
+        {
+          name: "keywords",
+          content:
+            "neural mesh tech, neural mesh technologies, nueral mesh tech, neural mesh case study, neural mesh portfolio, software development case study",
+        },
         { property: "og:title", content: title },
         { property: "og:description", content: desc },
         { property: "og:type", content: "article" },
         { property: "og:url", content: url },
         { property: "og:image", content: "https://neuralmeshs.com/og-image.png" },
+        { property: "og:image:secure_url", content: "https://neuralmeshs.com/og-image.png" },
+        { property: "og:image:width", content: "1200" },
+        { property: "og:image:height", content: "630" },
+        { property: "og:image:alt", content: `${p?.name ?? "Case study"} — Neural Mesh Tech` },
+        { property: "og:site_name", content: "Neural Mesh Tech" },
+        { property: "og:locale", content: "en_US" },
+        { property: "article:author", content: "Neural Mesh Tech" },
+        { property: "article:publisher", content: "https://neuralmeshs.com" },
         { name: "twitter:card", content: "summary_large_image" },
+        { name: "twitter:site", content: "@neuralmeshs" },
+        { name: "twitter:creator", content: "@neuralmeshs" },
         { name: "twitter:title", content: title },
         { name: "twitter:description", content: desc },
         { name: "twitter:image", content: "https://neuralmeshs.com/og-image.png" },
+        { name: "robots", content: "index, follow, max-image-preview:large, max-snippet:-1" },
       ],
       links: p ? [{ rel: "canonical", href: url }] : [],
       scripts: p
@@ -36,10 +58,20 @@ export const Route = createFileRoute("/work/$slug")({
               children: JSON.stringify({
                 "@context": "https://schema.org",
                 "@type": "CreativeWork",
+                "@id": `${url}#work`,
                 name: p.name,
                 description: p.desc,
-                creator: { "@type": "Organization", name: "Neural Mesh Tech" },
+                creator: {
+                  "@type": "Organization",
+                  "@id": "https://neuralmeshs.com/#organization",
+                  name: "Neural Mesh Tech",
+                  alternateName: "Neural Mesh Technologies",
+                  url: "https://neuralmeshs.com",
+                },
+                publisher: { "@id": "https://neuralmeshs.com/#organization" },
                 dateCreated: p.year,
+                url,
+                isPartOf: { "@id": "https://neuralmeshs.com/#website" },
               }),
             },
             {
