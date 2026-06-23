@@ -3,5 +3,5 @@
   "buildCommand": "bun run build",
   "installCommand": "bun install",
   "framework": null,
-  "outputDirectory": ".output"
+  "outputDirectory": "dist"
 }
