@@ -9,22 +9,22 @@ import { ProjectModal } from "@/components/ProjectModal";
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "Neural Mesh Tech — Software that ships. | Neural Mesh Technologies" },
+      { title: "Neural Mesh — Software that ships. | Neural Mesh Technologies" },
       {
         name: "description",
         content:
-          "Neural Mesh Tech (Neural Mesh Technologies) is a focused software development and IT consulting studio. We build web apps, mobile apps, APIs, MVPs, and modernize legacy systems. No buzzwords. No bloat. Just good product.",
+          "Neural Mesh (Neural Mesh Technologies / Neural Mesh Tech) is a focused custom software development and IT consulting studio. We build web apps, mobile apps, APIs, MVPs, and modernize legacy systems. No buzzwords. No bloat. Just good product.",
       },
       {
         name: "keywords",
         content:
-          "neural mesh tech, neural mesh technologies, nueral mesh tech, nueral mesh technologies, neural mesh, neuralmeshs, neural mesh software, neural mesh studio, software studio, software development, it consulting, custom software, web app development, mobile app development, api development, mvp development, legacy modernization, tech consulting",
+          "neural mesh, neural mesh tech, neural mesh technologies, nueral mesh tech, nueral mesh technologies, neuralmeshs, neural mesh software, neural mesh studio, software studio, software development, it consulting, custom software, web app development, mobile app development, api development, mvp development, legacy modernization, tech consulting",
       },
-      { property: "og:title", content: "Neural Mesh Tech — Software that ships." },
+      { property: "og:title", content: "Neural Mesh — Software that ships. | Neural Mesh Technologies" },
       {
         property: "og:description",
         content:
-          "Neural Mesh Tech (Neural Mesh Technologies) — software development and IT consulting studio. Web apps, mobile apps, APIs, MVPs, modernization.",
+          "Neural Mesh (Neural Mesh Technologies) — custom software development and IT consulting studio. Web apps, mobile apps, APIs, MVPs, modernization.",
       },
       { property: "og:type", content: "website" },
       { property: "og:url", content: "https://neuralmeshs.com/" },
@@ -32,17 +32,17 @@ export const Route = createFileRoute("/")({
       { property: "og:image:secure_url", content: "https://neuralmeshs.com/og-image.png" },
       { property: "og:image:width", content: "1200" },
       { property: "og:image:height", content: "630" },
-      { property: "og:image:alt", content: "Neural Mesh Tech — Software that ships." },
-      { property: "og:site_name", content: "Neural Mesh Tech" },
+      { property: "og:image:alt", content: "Neural Mesh — Software that ships." },
+      { property: "og:site_name", content: "Neural Mesh" },
       { property: "og:locale", content: "en_US" },
       { name: "twitter:card", content: "summary_large_image" },
       { name: "twitter:site", content: "@neuralmeshs" },
       { name: "twitter:creator", content: "@neuralmeshs" },
-      { name: "twitter:title", content: "Neural Mesh Tech — Software that ships." },
+      { name: "twitter:title", content: "Neural Mesh — Software that ships. | Neural Mesh Technologies" },
       {
         name: "twitter:description",
         content:
-          "Neural Mesh Tech (Neural Mesh Technologies) — software & IT consulting studio. No buzzwords. No bloat. Just good product.",
+          "Neural Mesh (Neural Mesh Technologies) — software & IT consulting studio. No buzzwords. No bloat. Just good product.",
       },
       { name: "twitter:image", content: "https://neuralmeshs.com/og-image.png" },
       { name: "robots", content: "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" },
@@ -55,9 +55,10 @@ export const Route = createFileRoute("/")({
           "@context": "https://schema.org",
           "@type": "Organization",
           "@id": "https://neuralmeshs.com/#organization",
-          name: "Neural Mesh Tech",
+          name: "Neural Mesh Technologies",
           alternateName: [
-            "Neural Mesh Technologies",
+            "Neural Mesh",
+            "Neural Mesh Tech",
             "Nueral Mesh Tech",
             "Nueral Mesh Technologies",
             "NeuralMesh",
@@ -67,17 +68,17 @@ export const Route = createFileRoute("/")({
             "Neural Mesh Tech Inc",
             "Neural Mesh Technologies Inc",
           ],
-          legalName: "Neural Mesh Tech",
-          url: "https://neuralmeshs.com",
+          legalName: "Neural Mesh Technologies",
+          url: "https://neuralmeshs.com/",
           logo: {
             "@type": "ImageObject",
-            url: "https://neuralmeshs.com/icondark.png",
+            url: "https://neuralmeshs.com/favicon.png",
             width: 512,
             height: 512,
           },
           image: "https://neuralmeshs.com/og-image.png",
           description:
-            "Neural Mesh Tech (Neural Mesh Technologies) is a focused software development and IT consulting studio. Web apps, mobile apps, APIs, MVPs, and legacy modernization.",
+            "Neural Mesh (Neural Mesh Technologies / Neural Mesh Tech) is a focused software development and IT consulting studio. Web apps, mobile apps, APIs, MVPs, and legacy modernization.",
           foundingDate: "2024",
           email: "hello@neuralmeshs.com",
           contactPoint: [
@@ -96,7 +97,7 @@ export const Route = createFileRoute("/")({
               areaServed: "Worldwide",
             },
           ],
-          sameAs: ["https://neuralmeshs.com"],
+          sameAs: ["https://neuralmeshs.com/"],
           areaServed: "Worldwide",
           slogan: "Software that ships.",
           knowsAbout: [
@@ -116,7 +117,7 @@ export const Route = createFileRoute("/")({
             "AWS",
           ],
           keywords:
-            "neural mesh tech, neural mesh technologies, nueral mesh tech, nueral mesh technologies, software development, it consulting",
+            "neural mesh, neural mesh tech, neural mesh technologies, nueral mesh tech, nueral mesh technologies, software development, it consulting",
         }),
       },
       {
@@ -125,9 +126,9 @@ export const Route = createFileRoute("/")({
           "@context": "https://schema.org",
           "@type": "ProfessionalService",
           "@id": "https://neuralmeshs.com/#service",
-          name: "Neural Mesh Tech",
-          alternateName: "Neural Mesh Technologies",
-          url: "https://neuralmeshs.com",
+          name: "Neural Mesh Technologies",
+          alternateName: ["Neural Mesh", "Neural Mesh Tech"],
+          url: "https://neuralmeshs.com/",
           image: "https://neuralmeshs.com/og-image.png",
           description:
             "Software development and IT consulting services: web apps, mobile apps, APIs, MVPs, and legacy modernization.",
@@ -154,10 +155,10 @@ export const Route = createFileRoute("/")({
           mainEntity: [
             {
               "@type": "Question",
-              name: "What is Neural Mesh Tech?",
+              name: "What is Neural Mesh?",
               acceptedAnswer: {
                 "@type": "Answer",
-                text: "Neural Mesh Tech (also known as Neural Mesh Technologies) is a small, focused software development and IT consulting studio. We build web apps, mobile apps, APIs, MVPs, and modernize legacy systems.",
+                text: "Neural Mesh (Neural Mesh Technologies / Neural Mesh Tech) is a small, focused software development and IT consulting studio. We build web apps, mobile apps, APIs, MVPs, and modernize legacy systems.",
               },
             },
             {
@@ -165,12 +166,12 @@ export const Route = createFileRoute("/")({
               name: "Is Neural Mesh Tech the same as Neural Mesh Technologies?",
               acceptedAnswer: {
                 "@type": "Answer",
-                text: "Yes. Neural Mesh Tech is the operating name; Neural Mesh Technologies is the formal alternate name. The official website is neuralmeshs.com.",
+                text: "Yes. Neural Mesh is the primary brand name; Neural Mesh Tech and Neural Mesh Technologies are alternate names. The official website is neuralmeshs.com.",
               },
             },
             {
               "@type": "Question",
-              name: "What services does Neural Mesh Tech offer?",
+              name: "What services does Neural Mesh offer?",
               acceptedAnswer: {
                 "@type": "Answer",
                 text: "Web application development, mobile app development (iOS and Android), API and backend engineering, MVP development for startups, tech consulting, and legacy system modernization.",
@@ -178,15 +179,15 @@ export const Route = createFileRoute("/")({
             },
             {
               "@type": "Question",
-              name: "Where is Neural Mesh Tech located?",
+              name: "Where is Neural Mesh located?",
               acceptedAnswer: {
                 "@type": "Answer",
-                text: "Neural Mesh Tech serves clients worldwide. Reach us at hello@neuralmeshs.com to start a project.",
+                text: "Neural Mesh serves clients worldwide. Reach us at hello@neuralmeshs.com to start a project.",
               },
             },
             {
               "@type": "Question",
-              name: "How do I contact Neural Mesh Tech?",
+              name: "How do I contact Neural Mesh?",
               acceptedAnswer: {
                 "@type": "Answer",
                 text: "Email hello@neuralmeshs.com or visit the contact section at neuralmeshs.com/#contact. We respond within 24 hours.",
@@ -639,7 +640,7 @@ function Index() {
           </div>
         </div>
         <div className="border-t border-violet/20 py-6 px-6 text-center font-mono text-[10px] sm:text-[11px] uppercase tracking-[0.1em] sm:tracking-[0.2em] text-near-white/50 leading-relaxed">
-          Neural Mesh Tech © 2024 <span className="inline-block">· Built with intent, not a template.</span>
+          Neural Mesh Tech &copy; {new Date().getFullYear()} <span className="inline-block">· Built with intent, not a template.</span>
         </div>
       </footer>
 

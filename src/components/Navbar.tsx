@@ -40,7 +40,7 @@ export function Navbar() {
       >
         <div className="max-w-7xl mx-auto px-6 md:px-10 h-20 flex items-center justify-between">
           <a href="/" className="flex items-center z-50">
-            <img src="/totalfavicon.png" alt="Neural Mesh Tech Logo" className="h-10 md:h-12 w-auto object-contain" />
+            <img src="/favicon.png" alt="Neural Mesh Tech Logo" className="h-10 md:h-12 w-auto object-contain" />
           </a>
 
           {/* Desktop Nav */}

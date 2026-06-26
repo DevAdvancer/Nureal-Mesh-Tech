@@ -64,9 +64,9 @@ export const Route = createFileRoute("/work/$slug")({
                 creator: {
                   "@type": "Organization",
                   "@id": "https://neuralmeshs.com/#organization",
-                  name: "Neural Mesh Tech",
-                  alternateName: "Neural Mesh Technologies",
-                  url: "https://neuralmeshs.com",
+                  name: "Neural Mesh Technologies",
+                  alternateName: ["Neural Mesh", "Neural Mesh Tech"],
+                  url: "https://neuralmeshs.com/",
                 },
                 publisher: { "@id": "https://neuralmeshs.com/#organization" },
                 dateCreated: p.year,
