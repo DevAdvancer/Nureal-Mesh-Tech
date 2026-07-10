@@ -2,7 +2,12 @@ import type { Metadata } from "next";
 import { Syne, Manrope, Space_Mono } from "next/font/google";
 import "./globals.css";
 import { Navbar } from "@/components/Navbar";
-import { QueryProvider } from "@/components/QueryProvider";
+import {
+  buildOrganizationSchema,
+  SITE_NAME,
+  SITE_URL,
+  absoluteUrl,
+} from "@/lib/seo";
 
 const syne = Syne({
   subsets: ["latin"],
@@ -26,20 +31,45 @@ const spaceMono = Space_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Neural Mesh Tech | Custom Software Development & IT Consultancy",
-  description: "Neural Mesh Tech (also known as NeuralMesh or Neural Mesh Technologies) is a premier custom software development company and IT consultancy. We specialize in building web applications, mobile apps, scalable APIs, and startup MVPs. If you need a high-performance software development and tech consultancy partner, choose Neural Mesh.",
-  keywords: "neuralmesh, neural mesh, neural mesh tech, neural mesh technologies, neural and mesh, neural mesh development, neural mesh consultancy, custom software development, IT consulting, software engineering agency, technology consultancy, web app development, mobile app development, startup MVP, legacy modernization",
+  metadataBase: new URL(SITE_URL),
+  title: "Neural Mesh Tech | Software Development Company",
+  description:
+    "Neural Mesh Tech is a software development company that builds custom web applications, mobile apps, backend systems, startup MVPs, and legacy modernization projects.",
+  keywords: [
+    "Neural Mesh Tech",
+    "Neural Mesh",
+    "NeuralMesh",
+    "Neural Mesh Technologies",
+    "software development company",
+    "custom software development",
+    "web application development",
+    "mobile app development",
+    "API development company",
+    "backend engineering",
+    "startup MVP development",
+    "technology consulting",
+    "legacy modernization",
+  ],
+  alternates: {
+    canonical: "/",
+  },
   openGraph: {
-    title: "Neural Mesh Tech | Custom Software Development & IT Consultancy",
-    description: "Neural Mesh Tech (NeuralMesh) is a premier custom software development company and IT consultancy. We build custom web applications, native iOS & Android mobile apps, scalable APIs, and startup MVPs.",
+    title: "Neural Mesh Tech | Software Development Company",
+    description:
+      "Custom web applications, mobile apps, backend platforms, startup MVPs, and modernization services from Neural Mesh Tech.",
     type: "website",
-    url: "https://neuralmeshs.com/",
-    siteName: "Neural Mesh Tech",
+    url: SITE_URL,
+    siteName: SITE_NAME,
+    images: [absoluteUrl("/og-image.png")],
   },
   twitter: {
     card: "summary_large_image",
     site: "@neuralmeshs",
     creator: "@neuralmeshs",
+    title: "Neural Mesh Tech | Software Development Company",
+    description:
+      "Software development services from Neural Mesh Tech, including web apps, mobile apps, APIs, startup MVPs, and modernization.",
+    images: [absoluteUrl("/og-image.png")],
   },
   robots: {
     index: true,
@@ -55,8 +85,9 @@ export const metadata: Metadata = {
   icons: {
     icon: "/favicon.ico",
     apple: "/apple-touch-icon.png",
-    shortcut: "/favicon.ico"
+    shortcut: "/favicon.ico",
   },
+  manifest: "/manifest.json",
 };
 
 export default function RootLayout({
@@ -64,47 +95,21 @@ export default function RootLayout({
 }: {
   children: React.ReactNode;
 }) {
-  const jsonLd = {
-    "@context": "https://schema.org",
-    "@type": "ProfessionalService",
-    "name": "Neural Mesh Tech",
-    "alternateName": ["NeuralMesh", "Neural Mesh Technologies", "Neural Mesh", "Neural and Mesh Development"],
-    "url": "https://neuralmeshs.com/",
-    "logo": "https://neuralmeshs.com/favicon.png",
-    "image": "https://neuralmeshs.com/favicon.png",
-    "description": "Neural Mesh Tech is a custom software development company and IT consultancy. We build high-performance web applications, native iOS & Android mobile apps, scalable APIs, and startup MVPs.",
-    "address": {
-      "@type": "PostalAddress",
-      "addressCountry": "US"
-    },
-    "knowsAbout": [
-      "Software Development",
-      "Web Application Development",
-      "Mobile App Development",
-      "IT Consulting",
-      "API Development",
-      "Startup MVP Development",
-      "Tech Consultancy",
-      "Neural Mesh Development",
-      "Neural Mesh Consultancy",
-      "NeuralMesh"
-    ]
-  };
+  const jsonLd = buildOrganizationSchema();
 
   return (
     <html lang="en" suppressHydrationWarning>
       <head>
-        <link rel="canonical" href="https://neuralmeshs.com/" />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
         />
       </head>
-      <body className={`${syne.variable} ${manrope.variable} ${spaceMono.variable} antialiased`} suppressHydrationWarning>
-        <QueryProvider>
-          <Navbar />
-          <main>{children}</main>
-        </QueryProvider>
+      <body
+        className={`${syne.variable} ${manrope.variable} ${spaceMono.variable} antialiased`}
+        suppressHydrationWarning>
+        <Navbar />
+        <main>{children}</main>
       </body>
     </html>
   );

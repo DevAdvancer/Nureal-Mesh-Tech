@@ -1,5 +1,5 @@
 # robots.txt — Neural Mesh Tech (Neural Mesh Technologies)
-# https://neuralmeshs.com
+# https://www.neuralmeshs.com
 
 User-agent: *
 Allow: /
@@ -97,4 +97,4 @@ User-agent: YandexBot
 Allow: /
 
 # Sitemaps
-Sitemap: https://neuralmeshs.com/sitemap.xml
+Sitemap: https://www.neuralmeshs.com/sitemap.xml

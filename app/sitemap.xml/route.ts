@@ -1,12 +1,20 @@
 import { NextResponse } from "next/server";
 import { PROJECTS } from "@/data/projects";
+import { SERVICE_PAGES } from "@/data/services";
 
-const BASE_URL = "https://neuralmeshs.com";
+const BASE_URL = "https://www.neuralmeshs.com";
 
 export async function GET() {
   const today = new Date().toISOString().split("T")[0];
   const entries = [
     { path: "/", changefreq: "weekly", priority: "1.0", lastmod: today },
+    { path: "/services", changefreq: "weekly", priority: "0.9", lastmod: today },
+    ...SERVICE_PAGES.map((service) => ({
+      path: `/services/${service.slug}`,
+      changefreq: "monthly" as const,
+      priority: "0.85",
+      lastmod: today,
+    })),
     ...PROJECTS.map((p) => ({
       path: `/work/${p.slug}`,
       changefreq: "monthly" as const,

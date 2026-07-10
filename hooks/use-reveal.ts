@@ -4,7 +4,16 @@ import { useEffect } from "react";
 
 export function useReveal() {
   useEffect(() => {
+    if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+      document
+        .querySelectorAll<HTMLElement>(".reveal")
+        .forEach((el) => el.classList.add("in"));
+      return;
+    }
+
     const els = document.querySelectorAll<HTMLElement>(".reveal");
+    if (els.length === 0) return;
+
     const io = new IntersectionObserver(
       (entries) => {
         entries.forEach((e) => {

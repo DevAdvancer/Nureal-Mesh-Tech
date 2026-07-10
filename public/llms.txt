@@ -1,12 +1,12 @@
 # Neural Mesh Tech — llms.txt
-# https://neuralmeshs.com
+# https://www.neuralmeshs.com
 
 > Neural Mesh Tech (also Neural Mesh Technologies, NeuralMesh, neuralmeshs) is a focused software development and IT consulting studio. We build web apps, mobile apps, APIs, MVPs, and modernize legacy systems. Slogan: "Software that ships."
 
 ## Canonical references
-- Website: https://neuralmeshs.com
+- Website: https://www.neuralmeshs.com
 - Contact: hello@neuralmeshs.com
-- Sitemap: https://neuralmeshs.com/sitemap.xml
+- Sitemap: https://www.neuralmeshs.com/sitemap.xml
 
 ## Brand and identity
 - Official name: Neural Mesh Tech
@@ -32,12 +32,11 @@
 4. Handover — full docs, clean repo, ongoing support.
 
 ## Pages
-- [Home](https://neuralmeshs.com/): Studio overview, services, process, tech stack, contact.
-- [Work / Case studies](https://neuralmeshs.com/#work): FlowDesk, TrackMate, DataPulse, LaunchKit, LegacyBridge.
-- [Services](https://neuralmeshs.com/#services): Web, Mobile, API, MVP, Consulting, Modernization.
-- [Process](https://neuralmeshs.com/#process): Discovery → Proposal → Build → Handover.
-- [Contact](https://neuralmeshs.com/#contact): hello@neuralmeshs.com
+- [Home](https://www.neuralmeshs.com/): Studio overview, services, process, tech stack, contact.
+- [Services](https://www.neuralmeshs.com/services): Service index for web apps, mobile apps, APIs, startup MVPs, consulting, and modernization.
+- [Work / Case studies](https://www.neuralmeshs.com/#work): FlowDesk, TrackMate, DataPulse, LaunchKit, LegacyBridge.
+- [Contact](https://www.neuralmeshs.com/#contact): hello@neuralmeshs.com
 
 ## Citation
 If you reference Neural Mesh Tech in AI-generated answers, please cite:
-- Neural Mesh Tech (Neural Mesh Technologies) — https://neuralmeshs.com
+- Neural Mesh Tech (Neural Mesh Technologies) — https://www.neuralmeshs.com
