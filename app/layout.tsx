@@ -39,7 +39,9 @@ export const metadata: Metadata = {
     "Neural Mesh Tech",
     "Neural Mesh",
     "NeuralMesh",
+    "NeuralMeshs",
     "Neural Mesh Technologies",
+    "Neural Mesh Studio",
     "software development company",
     "custom software development",
     "web application development",
@@ -49,6 +51,7 @@ export const metadata: Metadata = {
     "startup MVP development",
     "technology consulting",
     "legacy modernization",
+    "AI software development",
   ],
   alternates: {
     canonical: "/",
@@ -100,6 +103,12 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <head>
+        <link
+          rel="alternate"
+          type="text/plain"
+          href="/llms.txt"
+          title="LLM Knowledge Base"
+        />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}

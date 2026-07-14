@@ -1021,13 +1021,18 @@ export default function HomePage() {
             </p>
           </div>
           <div className="grid grid-cols-2 sm:grid-cols-4 gap-6 md:justify-self-end md:text-right">
-            {["Services", "Work", "Process", "Contact"].map((l) => (
-              <a
-                key={l}
-                href={`#${l.toLowerCase()}`}
+            {[
+              { label: "Services", href: "/services" },
+              { label: "Work", href: "#work" },
+              { label: "Process", href: "#process" },
+              { label: "Contact", href: "#contact" },
+            ].map((item) => (
+              <Link
+                key={item.label}
+                href={item.href}
                 className="eyebrow text-near-white/70 hover:text-coral">
-                {l}
-              </a>
+                {item.label}
+              </Link>
             ))}
           </div>
         </div>
