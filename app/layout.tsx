@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Syne, Manrope, Space_Mono } from "next/font/google";
 import "./globals.css";
 import { Navbar } from "@/components/Navbar";
+import { Footer } from "@/components/Footer";
 import {
   buildOrganizationSchema,
   SITE_NAME,
@@ -119,6 +120,7 @@ export default function RootLayout({
         suppressHydrationWarning>
         <Navbar />
         <main>{children}</main>
+        <Footer />
       </body>
     </html>
   );
