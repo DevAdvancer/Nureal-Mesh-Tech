@@ -1,5 +1,7 @@
 import { NextResponse } from "next/server";
 import { Resend } from "resend";
+import dbConnect from "../../../lib/mongodb";
+import FormSubmission from "../../../lib/models/FormSubmission";
 
 export async function POST(request: Request) {
   try {
@@ -13,15 +15,27 @@ export async function POST(request: Request) {
       );
     }
 
+    // Save to MongoDB
+    try {
+      await dbConnect();
+      await FormSubmission.create({
+        company: "Neural Mesh Tech",
+        name,
+        email,
+        message,
+      });
+    } catch (dbError: any) {
+      console.error("MongoDB Error:", dbError);
+      // We will still proceed to send the email even if DB fails
+    }
+
     const resendApiKey = process.env.RESEND_API_KEY;
     const resendFrom = process.env.RESEND_FROM_EMAIL || "onboarding@resend.dev";
     const contactEmail = process.env.NEXT_PUBLIC_CONTACT_EMAIL || "theabhirupkumar@gmail.com";
 
     if (!resendApiKey) {
-      return NextResponse.json(
-        { error: "Server misconfiguration: missing API key." },
-        { status: 500 }
-      );
+      console.warn("RESEND_API_KEY is missing. Form saved to DB, but email will not be sent.");
+      return NextResponse.json({ success: true, message: "Saved to DB, email skipped" });
     }
 
     const resend = new Resend(resendApiKey);

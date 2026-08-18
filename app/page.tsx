@@ -901,7 +901,7 @@ export default function HomePage() {
               <p className="font-body text-[14px] text-near-white/60 leading-relaxed max-w-sm mx-auto">
                 Your request has been delivered safely via the{" "}
                 <span className="text-violet font-semibold">
-                  Resend API Portal
+                  Neural Protocol
                 </span>
                 . We respond within 24 hours.
               </p>
