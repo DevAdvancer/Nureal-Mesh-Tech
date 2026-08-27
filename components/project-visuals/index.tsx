@@ -31,7 +31,7 @@ export function hasProjectVisual(slug: string): boolean {
 }
 
 /**
- * Renders the actual image for `slug` if it exists, otherwise renders the bespoke SVG for `slug`, 
+ * Renders the bespoke SVG for `slug` if authored, otherwise falls back to the actual image if it exists,
  * or nothing (letting the underlying gradient show through) when no scene has been authored yet.
  */
 export function ProjectVisual({
@@ -42,11 +42,13 @@ export function ProjectVisual({
   className?: string;
 }) {
   const p = getProject(slug);
+  
+  const Scene = VISUALS[slug];
+  if (Scene) return <Scene className={className} />;
+
   if (p?.image) {
     return <img src={p.image} alt={p.name} className={`${className || ""} object-cover w-full h-full`} />;
   }
 
-  const Scene = VISUALS[slug];
-  if (!Scene) return null;
-  return <Scene className={className} />;
+  return null;
 }
