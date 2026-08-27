@@ -1,0 +1,25 @@
+<svg width="100%" height="100%" viewBox="0 0 800 600" xmlns="http://www.w3.org/2000/svg">
+    <defs>
+        <linearGradient id="grad" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" stop-color="#FFB830" />
+            <stop offset="100%" stop-color="#B8F2C8" />
+        </linearGradient>
+        <filter id="glass" x="-20%" y="-20%" width="140%" height="140%">
+            <feGaussianBlur stdDeviation="8" result="blur" />
+            <feColorMatrix type="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 18 -7" result="glow" />
+            <feComposite in="SourceGraphic" in2="glow" operator="over" />
+        </filter>
+    </defs>
+    <rect width="100%" height="100%" fill="url(#grad)" />
+    
+    <!-- Abstract decorative shapes -->
+    <circle cx="640.0" cy="120.0" r="240.0" fill="white" fill-opacity="0.05" />
+    <circle cx="80.0" cy="540.0" r="180.0" fill="black" fill-opacity="0.1" />
+    <rect x="480.0" y="360.0" width="240.0" height="300.0" rx="20" fill="white" fill-opacity="0.08" transform="rotate(-15 480.0 360.0)" />
+    
+    <!-- Glassmorphic card -->
+    <rect x="80.0" y="180.0" width="640.0" height="240.0" rx="24" fill="white" fill-opacity="0.15" stroke="white" stroke-width="1.5" stroke-opacity="0.3" filter="url(#glass)" />
+    
+    <text x="400.0" y="288.0" font-family="sans-serif" font-size="42" font-weight="bold" fill="white" text-anchor="middle" letter-spacing="2">GALLERY</text>
+    <text x="400.0" y="348.0" font-family="monospace" font-size="18" fill="rgba(255,255,255,0.8)" text-anchor="middle" letter-spacing="4">SCENE 02</text>
+</svg>

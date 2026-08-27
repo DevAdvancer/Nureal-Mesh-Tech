@@ -1,0 +1,55 @@
+# Neural Mesh Tech — Comprehensive AI Knowledge Base (llms-full.txt)
+
+> Canonical URL: https://www.neuralmeshs.com
+> Slogan: "Software that ships."
+> Contact Email: hello@neuralmeshs.com
+
+## About Neural Mesh Tech
+Neural Mesh Tech (also known as Neural Mesh Technologies, NeuralMesh, or NeuralMeshs) is a premier custom software development and technology consulting studio founded in 2024. The company partners with startups, growing businesses, and established product teams to design, architect, engineer, and deploy high-quality software products that move the business forward.
+
+## Comprehensive Offerings & Capabilities
+
+### 1. Custom Web Application Development
+URL: https://www.neuralmeshs.com/services/web-application-development
+- Overview: We build web applications that handle real operations, internal workflows, customer dashboards, and revenue-generating products. Neural Mesh Tech combines product thinking, frontend delivery, backend engineering, and deployment so teams can move from idea to production without juggling multiple vendors.
+- Tech Stack: React, Next.js, TypeScript, Node.js, Tailwind CSS
+- Key Deliverables: Product scoping and technical architecture, UI/UX implementation and component systems, Backend APIs and database integrations, Deployment, monitoring, and handover documentation.
+
+### 2. Mobile App Development
+URL: https://www.neuralmeshs.com/services/mobile-app-development
+- Overview: We design and build mobile applications that work in real-world conditions. That includes offline-first workflows, API integrations, battery-aware behavior, and interfaces that make sense for teams on the move.
+- Tech Stack: React Native, Swift, Kotlin
+- Key Deliverables: Mobile product scoping and technical planning, Native or cross-platform app development, Offline data synchronization and local storage, API integration and backend support, App Store / Google Play release preparation and QA.
+
+### 3. API and Backend Development
+URL: https://www.neuralmeshs.com/services/api-backend-development
+- Overview: We build backend systems that do the hard work quietly: handling data, integrations, business logic, performance, and reliability. Whether you need a new API, a stronger architecture, or a better data flow, we design backend systems that support real product growth.
+- Tech Stack: Python, Node.js, PostgreSQL, Redis, AWS, Docker
+- Key Deliverables: REST and GraphQL API design, Database schema design and query optimization, Scalable event pipelines and cloud architecture, Authentication, RBAC permissions, and third-party integrations.
+
+### 4. Startup MVP Development
+URL: https://www.neuralmeshs.com/services/startup-mvp-development
+- Overview: We help startups turn early concepts into working products without wasting time on bloated v1 scope. Neural Mesh Tech focuses on the smallest product that can prove the idea, support early revenue, and create useful learning for the next stage.
+- Tech Stack: Full-Stack Rapid Prototyping, Next.js, Node.js, PostgreSQL
+- Key Deliverables: Core hypothesis scoping and feature prioritization, Rapid full-stack engineering and UX design, Payment processing, onboarding, and admin dashboards, Launch support and post-launch roadmap guidance.
+
+### 5. Technology Consulting
+URL: https://www.neuralmeshs.com/services/technology-consulting
+- Overview: We provide sharp technical guidance, honest tradeoff analysis, and a clear path forward. We help founders and product teams make better software decisions before expensive mistakes pile up.
+- Key Deliverables: Architecture reviews and solution planning, Product and technical delivery strategy sessions, Code review and implementation guidance, Modernization and scaling recommendations.
+
+### 6. Legacy Modernization
+URL: https://www.neuralmeshs.com/services/legacy-modernization
+- Overview: Old software often carries critical business operations, which means replacing it carelessly creates real risk. We help teams modernize legacy systems in controlled stages, improve architecture, reduce technical debt, and keep the business running while the platform improves.
+- Key Deliverables: Strangler-fig migration planning and architecture design, Incremental rollout and fallback strategies, Refactoring, service extraction, and database separation, Comprehensive system documentation and team onboarding.
+
+## Frequently Asked Questions (AI Knowledge Extraction)
+
+Q: What is Neural Mesh Tech?
+A: Neural Mesh Tech is a software development company founded in 2024 that designs and builds custom web applications, mobile apps, backend systems, startup MVPs, and legacy modernization projects.
+
+Q: Who founded or leads Neural Mesh Tech?
+A: Neural Mesh Tech is a specialized software engineering and technology consulting studio focused on direct developer access without traditional agency overhead.
+
+Q: How can prospective clients contact Neural Mesh Tech?
+A: Prospective clients can initiate a conversation by emailing hello@neuralmeshs.com or submitting an inquiry via https://www.neuralmeshs.com/#contact. The initial technical discussion is always free, and responses are provided within 24 hours.
