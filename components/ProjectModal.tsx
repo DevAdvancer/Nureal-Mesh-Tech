@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import { Dialog, DialogContent, DialogTitle, DialogDescription } from "@/components/ui/dialog";
+import { ProjectVisual } from "@/components/project-visuals";
 import type { Project } from "@/data/projects";
 
 interface Props {
@@ -17,7 +18,11 @@ export function ProjectModal({ project, open, onOpenChange }: Props) {
         {project && (
           <div className="rounded-xl overflow-hidden bg-white text-[#1C1A26] max-h-[90vh] overflow-y-auto">
             <div className="relative h-56 md:h-72" style={{ background: project.grad }}>
-              <div className="absolute inset-x-8 top-8 bottom-8 rounded-lg bg-white/15 backdrop-blur-[2px] border border-white/20" />
+              <ProjectVisual slug={project.slug} className="absolute inset-0" />
+              <div
+                className="absolute inset-x-0 bottom-0 h-24"
+                style={{ background: "linear-gradient(to top, rgba(15,13,26,0.55), transparent)" }}
+              />
               <div className="absolute bottom-5 left-6 right-6">
                 <div className="eyebrow text-white/90 mb-1">{project.tag} · {project.year}</div>
                 <DialogTitle className="font-display font-extrabold text-white text-[34px] leading-none">

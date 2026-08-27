@@ -3,6 +3,9 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import { getProject, PROJECTS, type Project } from "@/data/projects";
 import { ProjectStats } from "@/components/ProjectStats";
+import { ProjectReport } from "@/components/ProjectReport";
+import { ProjectVisual } from "@/components/project-visuals";
+import { GalleryVisual } from "@/components/project-visuals/gallery-scenes";
 import { SITE_NAME, absoluteUrl, buildBreadcrumbSchema } from "@/lib/seo";
 
 interface PageProps {
@@ -119,7 +122,7 @@ export default async function ProjectPage({ params }: PageProps) {
             ← Back to work
           </Link>
           <div className="eyebrow text-amber mb-4">
-            {p.tag} · {p.year}
+            {p.sector} · {p.tag} · {p.year}
           </div>
           <h1
             className="font-display font-extrabold leading-[0.98] mb-6"
@@ -164,15 +167,9 @@ export default async function ProjectPage({ params }: PageProps) {
         style={{ backgroundColor: "#F5F1EA" }}>
         <div className="max-w-6xl mx-auto px-6 md:px-10">
           <div
-            className="rounded-2xl overflow-hidden shadow-[0_30px_80px_-30px_rgba(28,26,38,0.4)]"
+            className="relative rounded-2xl overflow-hidden shadow-[0_30px_80px_-30px_rgba(28,26,38,0.4)]"
             style={{ background: p.grad, aspectRatio: "16/9" }}>
-            <div className="w-full h-full flex items-center justify-center">
-              <div
-                className="font-display font-extrabold text-white/30"
-                style={{ fontSize: "clamp(60px, 12vw, 180px)" }}>
-                {p.name}
-              </div>
-            </div>
+            <ProjectVisual slug={p.slug} className="absolute inset-0" />
           </div>
         </div>
       </section>
@@ -231,6 +228,18 @@ export default async function ProjectPage({ params }: PageProps) {
         </div>
       </section>
 
+      {/* IMPACT REPORT */}
+      {p.report && (
+        <section
+          className="pb-24"
+          style={{ backgroundColor: "#F5F1EA", color: "#1C1A26" }}
+          aria-labelledby="impact-report">
+          <div className="max-w-6xl mx-auto px-6 md:px-10">
+            <ProjectReport report={p.report} />
+          </div>
+        </section>
+      )}
+
       {/* GALLERY */}
       <section
         className="py-20"
@@ -241,14 +250,12 @@ export default async function ProjectPage({ params }: PageProps) {
             {p.gallery.map((g, i) => (
               <figure key={i} className={i === 0 ? "md:col-span-2" : ""}>
                 <div
-                  className="rounded-xl overflow-hidden"
+                  className="relative rounded-xl overflow-hidden"
                   style={{
                     background: g.grad,
                     aspectRatio: i === 0 ? "16/8" : "4/3",
                   }}>
-                  <div className="w-full h-full flex items-center justify-center">
-                    <div className="w-3/4 h-3/4 rounded-lg bg-white/12 backdrop-blur-[2px] border border-white/15" />
-                  </div>
+                  <GalleryVisual kind={g.kind} label={g.caption} image={g.image} className="absolute inset-0" />
                 </div>
                 <figcaption className="font-mono text-[11px] uppercase tracking-[0.2em] text-near-white/55 mt-3">
                   {g.caption}
@@ -280,9 +287,11 @@ export default async function ProjectPage({ params }: PageProps) {
                 key={o.slug}
                 href={`/work/${o.slug}`}
                 className="group rounded-xl overflow-hidden bg-white transition-all hover:-translate-y-1 hover:shadow-[0_20px_50px_-20px_rgba(28,26,38,0.3)]">
-                <div className="h-40" style={{ background: o.grad }} />
+                <div className="relative h-40 overflow-hidden" style={{ background: o.grad }}>
+                  <ProjectVisual slug={o.slug} className="absolute inset-0" />
+                </div>
                 <div className="p-5">
-                  <div className="eyebrow text-[#1C1A26]/60 mb-2">{o.tag}</div>
+                  <div className="eyebrow text-[#1C1A26]/60 mb-2">{o.sector} · {o.tag}</div>
                   <h3 className="font-display font-semibold text-[18px]">
                     {o.name}
                   </h3>

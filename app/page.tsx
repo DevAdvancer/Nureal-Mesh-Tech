@@ -6,6 +6,7 @@ import dynamic from "next/dynamic";
 import Image from "next/image";
 import { useReveal } from "@/hooks/use-reveal";
 import { PROJECTS, SERVICE_FILTERS, type Project } from "@/data/projects";
+import { ProjectVisual } from "@/components/project-visuals";
 import { HOME_FAQS, buildFaqSchema } from "@/lib/seo";
 
 const HeroCanvas = dynamic(
@@ -236,14 +237,7 @@ function ProjectCard({
           height: big ? "62%" : 220,
           minHeight: big ? 360 : 220,
         }}>
-        <div className="absolute top-4 left-4 flex gap-1.5">
-          <span className="w-2.5 h-2.5 rounded-full bg-white/30" />
-          <span className="w-2.5 h-2.5 rounded-full bg-white/30" />
-          <span className="w-2.5 h-2.5 rounded-full bg-white/30" />
-        </div>
-        <div className="absolute inset-x-8 top-14 bottom-8 rounded-lg bg-white/15 backdrop-blur-[2px] border border-white/20" />
-        <div className="absolute left-12 top-20 right-12 h-2 rounded bg-white/40" />
-        <div className="absolute left-12 top-28 w-2/3 h-2 rounded bg-white/30" />
+        <ProjectVisual slug={p.slug} className="absolute inset-0" />
 
         <div
           className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity"
@@ -257,7 +251,7 @@ function ProjectCard({
         </span>
       </div>
       <div className="p-6">
-        <div className="eyebrow text-[#1C1A26]/60 mb-2">{p.tag}</div>
+        <div className="eyebrow text-[#1C1A26]/60 mb-2">{p.sector} · {p.tag}</div>
         <h3 className="font-display font-semibold text-[20px] mb-2">
           {p.name}
         </h3>
