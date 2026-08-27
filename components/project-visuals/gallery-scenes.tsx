@@ -545,24 +545,14 @@ export function GalleryVisual({
   className?: string;
   image?: string;
 }) {
-  const SceneRender = kind && (SCENES as Record<string, () => ReactNode>)[kind];
-
-  if (SceneRender) {
-    return (
-      <div className={className}>
-        <GFrame label={label}>{SceneRender()}</GFrame>
-      </div>
-    );
-  }
-
   if (image) {
     return <img src={image} alt={label} className={`${className || ""} object-cover w-full h-full`} />;
   }
 
-  const fallbackRender = SCENES.dashboard;
+  const render = (kind && (SCENES as Record<string, () => ReactNode>)[kind]) || SCENES.dashboard;
   return (
     <div className={className}>
-      <GFrame label={label}>{fallbackRender()}</GFrame>
+      <GFrame label={label}>{render()}</GFrame>
     </div>
   );
 }
