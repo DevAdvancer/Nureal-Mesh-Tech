@@ -27,14 +27,14 @@ export const metadata: Metadata = {
       "Custom web applications, mobile apps, backend engineering, startup MVPs, consulting, and modernization services from Neural Mesh Tech.",
     url: absoluteUrl("/services"),
     type: "website",
-    images: [absoluteUrl("/og-image.png")],
+    images: [absoluteUrl("/icon.png")],
   },
   twitter: {
-    card: "summary_large_image",
+    card: "summary",
     title: `Software Development Services | ${SITE_NAME}`,
     description:
       "See the software development services Neural Mesh Tech provides for startups and established teams.",
-    images: [absoluteUrl("/og-image.png")],
+    images: [absoluteUrl("/icon.png")],
   },
 };
 

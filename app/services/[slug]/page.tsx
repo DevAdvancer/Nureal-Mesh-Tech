@@ -47,13 +47,13 @@ export async function generateMetadata({
       description: service.metaDescription,
       url: absoluteUrl(`/services/${service.slug}`),
       type: "website",
-      images: [absoluteUrl("/og-image.png")],
+      images: [absoluteUrl("/icon.png")],
     },
     twitter: {
-      card: "summary_large_image",
+      card: "summary",
       title: service.metaTitle,
       description: service.metaDescription,
-      images: [absoluteUrl("/og-image.png")],
+      images: [absoluteUrl("/icon.png")],
     },
   };
 }

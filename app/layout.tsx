@@ -64,16 +64,16 @@ export const metadata: Metadata = {
     type: "website",
     url: SITE_URL,
     siteName: SITE_NAME,
-    images: [absoluteUrl("/og-image.png")],
+    images: [absoluteUrl("/icon.png")],
   },
   twitter: {
-    card: "summary_large_image",
+    card: "summary",
     site: "@neuralmeshs",
     creator: "@neuralmeshs",
     title: "Neural Mesh Tech | Software Development Company",
     description:
       "Software development services from Neural Mesh Tech, including web apps, mobile apps, APIs, startup MVPs, and modernization.",
-    images: [absoluteUrl("/og-image.png")],
+    images: [absoluteUrl("/icon.png")],
   },
   robots: {
     index: true,
