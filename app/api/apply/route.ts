@@ -94,7 +94,7 @@ export async function POST(request: Request) {
       from: resendFrom,
       to: [contactEmail],
       replyTo: email,
-      subject: \`Job Application from \${name} (via neuralmeshs.com)\`,
+      subject: `Job Application from ${name} (via neuralmeshs.com)`,
       html: htmlContent,
     });
 
